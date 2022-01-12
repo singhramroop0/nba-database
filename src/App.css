@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+* {
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+}
+
+body,
+html {
+	/* width: 100vw; */
+	background-color: black;
+}
+
+body {
+	background-color: black;
+}
+
+p {
+	margin: 0;
+}
+
+.index {
+	z-index: 90;
+}
+
+input:focus {
+	outline: none;
+}
+
+input::placeholder,
+input {
+	color: #ededed;
+}
+
+.inputContainer {
+	display: flex;
+	height: 50px;
+	width: 60vw;
+	padding: 0 15px 0 15px;
+	background-color: #4a4a4a;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 10px;
+}
+
+.searchResults {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 30px;
+	gap: 10px;
+	width: 55vw;
+	background-color: white;
+	border-radius: 0 0 5px 5px;
+}
+
+.result {
+	display: flex;
+	align-items: center;
+	height: 60px;
+	width: 70%;
+}
+
+.result img {
+	display: flex;
+	justify-content: center;
+	height: 90%;
+}
+
+.result a {
+	color: rgb(54, 54, 54);
+	font-size: 1rem;
+	flex-grow: 1;
+	text-decoration: none;
+	display: flex;
+}
+
+.result a strong {
+	padding-right: 5px;
+	width: 20%;
+}
+
+.animation {
+	display: flex;
+	height: 80vh;
+	align-items: center;
+	justify-content: center;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container div {
+	color: white;
+}
+
+.input {
+	border: 0;
+	background-color: transparent;
+	width: 80%;
+}
+
+.parentContainer {
+	display: flex;
+	justify-content: center;
+	height: 500px;
+	width: 100vw;
+	position: relative;
+}
+
+.playerContainer {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 60%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 10px;
+	background-color: white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.playerSection {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 60%;
+	margin-top: 10px;
+	width: 90%;
+}
+
+.playerPic {
+	height: 70%;
+	width: auto;
+}
+
+.playerSection p {
+	text-align: center;
+	font-family: "Bebas Neue", sans-serif;
+	font-size: clamp(2.5rem, 6.5vw, 3.3rem);
+	padding-top: 20px;
+	color: black;
+	line-height: 1;
+}
+
+.playerTeam {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	max-height: 40%;
+	width: 100px;
+}
+
+.playerPosition {
+	font-family: "Bebas Neue", sans-serif;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	height: 10%;
+	max-width: 100px;
+	padding: 0 10px;
+}
+
+.playerPosition {
+	top: 20px;
+	margin: 0 0;
+}
+.playerTeam {
+	top: 20px;
+	margin: 0 0;
+}
+
+.statsParent {
+	z-index: 20;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+}
+
+.statsContainer {
+	display: grid;
+	place-items: center;
+	max-width: 80%;
+	width: 100%;
+	grid-template-columns: 33% 33% 33%;
+}
+
+.stat {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	/* flex-direction: column; */
+	flex-direction: row;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.stat strong {
+	font-family: "Bebas Neue", sans-serif;
+	font-size: clamp(1.8rem, 5.5vw, 2.5rem);
+}
+
+.stat p {
+	font-family: "Abel", sans-serif;
+	font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.background {
+	position: absolute;
+	max-width: 90%;
+	max-height: 90%;
+	z-index: 0;
+	opacity: 0.1;
+}
+
+@media screen and (max-width: 800px) {
+	.inputContainer {
+		width: 80vw;
+	}
+	.searchResults {
+		width: 70vw;
+	}
+	.result {
+		width: 80%;
+	}
+	.result a {
+		font-size: 1rem;
+	}
+	input::placeholder {
+		font-size: 0.9rem;
+	}
+	.playerContainer {
+		z-index: 21;
+		width: 80%;
+		height: 90%;
+	}
+	.playerSection {
+		height: 50%;
+		width: 90%;
+	}
+
+	.playerTeam {
+		max-height: 30%;
+		max-width: 75px;
+	}
+
+	.playerPic {
+		height: 80%;
+	}
+	.parentContainer {
+		height: 470px;
+	}
+	.statsContainer {
+		max-width: 90%;
+	}
+	.stat {
+		flex-direction: row;
+		gap: 20px;
+	}
+	.stat p {
+		font-weight: bold;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.playerContainer {
+		height: 90%;
+	}
+	.playerSection p {
+		padding-top: 0;
+	}
+	.inputContainer {
+		width: 90vw;
+	}
+	.searchResults {
+		width: 75vw;
+	}
+	.result {
+		width: 85%;
+	}
+	.result a {
+		font-size: 0.9rem;
+	}
+	.playerSection {
+		height: 50%;
+		width: 90%;
+	}
+
+	.playerTeam {
+		max-height: 20%;
+		max-width: 50px;
+	}
+
+	.playerPic {
+		height: 60%;
+		width: auto;
+	}
+	.stat {
+		flex-direction: column;
+		gap: 0;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.playerSection p {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-height: 1100px) {
+	.playerPic {
+		height: 60%;
+		width: auto;
+	}
+}
