@@ -10,6 +10,7 @@ import { useState } from "react";
 import Loading from "./components/loadingAnimation";
 import { preload } from "./components/preloader";
 import nbaLogo from "./components/images/pic1.png";
+import Teams from "./components/teams";
 
 const fetchTeams = setLoading => {
 	async function fetch() {
@@ -43,6 +44,7 @@ const App = () => {
 					component={Player}
 				/>
 				<Route path="/games" component={LiveScores} />
+				<Route path="/teams" component={Teams} />
 			</Switch>
 		</>
 	);

@@ -1,0 +1,19 @@
+.teamContainer {
+	display: flex;
+	flex-direction: column;
+	height: 400px;
+	justify-content: center;
+	align-items: center;
+}
+
+.header {
+	font-family: "Abel", sans-serif;
+	font-weight: bold;
+	color: white;
+	font-size: clamp(3rem, 5vw, 3.8rem);
+	text-align: center;
+}
+
+.nba {
+	width: clamp(150px, 40%, 350px);
+}
