@@ -24,8 +24,11 @@ const Player = () => {
 			const { data } = await axios.get(
 				`https://data.nba.net/data/10s/prod/v1/2021/players/${id}_profile.json`
 			);
+			console.log(data);
 			setTeam(data.league.standard.teamId);
-			setPlayer(data.league.standard.stats.latest);
+			if (data.league.standard.stats.latest.seasonStageId !== 4)
+				setPlayer(data.league.standard.stats.latest);
+			else setPlayer(data.league.standard.stats.regularSeason.season[0].total);
 			setLoading(false);
 		}
 		fetchPlayer();

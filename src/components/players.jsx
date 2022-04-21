@@ -36,6 +36,7 @@ function Players() {
 		const { data } = await axios.get(
 			"https://data.nba.net/data/10s/prod/v1/2021/players.json"
 		);
+		console.log(data);
 		const { league } = data;
 		setPlayers([...league.standard]);
 		setLoading(false);
