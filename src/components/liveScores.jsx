@@ -81,7 +81,6 @@ const LiveScores = () => {
 			clearInterval(interval);
 		};
 	}, [date, loading]);
-
 	return loading ? (
 		<Loading />
 	) : (
