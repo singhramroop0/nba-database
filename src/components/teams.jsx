@@ -16,7 +16,7 @@ const Teams = () => {
 	});
 	return (
 		<animated.div style={props} className="teamContainer">
-			<img className="nba" src={nbaLogo} />
+			<img className="nba" src={nbaLogo} alt="NBA" />
 			<h1 className="header">To be added soon!</h1>
 		</animated.div>
 	);

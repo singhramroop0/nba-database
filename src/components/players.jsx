@@ -8,11 +8,9 @@ import Question from "./images/questionMark.png";
 function filterArray(players, searchTerm) {
 	if (searchTerm.length < 3) return [];
 	const updated = [];
-	for (let i = 0; i < players.length; i++) {
-		let name = `${players[i].firstName.toLowerCase()} ${players[
-			i
-		].lastName.toLowerCase()}`;
-		if (name.search(searchTerm.toLowerCase()) !== -1) updated.push(players[i]);
+	for (let player of players) {
+		let name = `${player.firstName.toLowerCase()} ${player.lastName.toLowerCase()}`;
+		if (name.includes(searchTerm.toLowerCase())) updated.push(player);
 	}
 	return updated;
 }
@@ -36,7 +34,6 @@ function Players() {
 		const { data } = await axios.get(
 			"https://data.nba.net/data/10s/prod/v1/2021/players.json"
 		);
-		console.log(data);
 		const { league } = data;
 		setPlayers([...league.standard]);
 		setLoading(false);
