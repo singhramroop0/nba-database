@@ -53,6 +53,15 @@
 	padding: 0 30px;
 }
 
+.noGame {
+	padding-top: 20px;
+	font-family: "Abel", sans-serif;
+	font-weight: bold;
+	color: white;
+	font-size: clamp(2.5rem, 4vw, 3rem);
+	text-align: center;
+}
+
 .grid {
 	padding: 10px 0;
 	display: grid;
@@ -76,6 +85,12 @@
 		"team2 time";
 	text-align: center;
 	/* font-weight: bold; */
+	transition: all 0.1s ease-in-out;
+}
+
+.game:hover {
+	background-color: black;
+	color: white;
 }
 
 .team1,
